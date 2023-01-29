@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "test": "npx vitest",
+        "test": "npx vitest run",
         "test:coverage": "vitest run --coverage"
     },
     "dependencies": {
