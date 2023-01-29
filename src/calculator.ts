@@ -11,7 +11,7 @@ const y = Number.parseInt(yStr);
 
 switch (operation) {
   case "add":
-    print(await add(x, y).toString());
+    print(add(x, y).toString());
     break;
   case "subtract":
     print(subtract(x, y).toString());
