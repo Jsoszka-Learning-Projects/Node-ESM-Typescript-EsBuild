@@ -1,27 +1,30 @@
-import {add} from "./operations/add.js"
-import { subtract } from "./operations/subtract.js"
+import { add } from "./operations/add.js";
+import { subtract } from "./operations/subtract.js";
+import colors from "@colors/colors"
 
 /**@type {Array<string>} */
-const args = (process.argv.slice(2))
+const args = process.argv.slice(2);
+const [operation, xStr, yStr] = args;
 
-console.log(args)
+const x = Number.parseInt(xStr);
+const y = Number.parseInt(yStr);
 
-const [operation, xStr, yStr] = args
+switch (operation) {
+  case "add":
+    print(add(x, y));
 
-const x = Number.parseInt(xStr)
-const y = Number.parseInt(yStr)
-
-switch(operation){
-    case "add":
-        console.log(add(x,y))
-
-        break
-    case "subtract":
-        console.log(subtract(x,y))
-        break
-    default:
-        console.log(`${operation} is not a supported operation`)
+    break;
+  case "subtract":
+    print(subtract(x, y));
+    break;
+  default:
+    printError(`${operation} is not a supported operation`);
 }
 
+function print(message){
+    console.log(colors.green(message))
+}
 
-
+function printError(message){
+    console.log(colors.red(message))
+}
