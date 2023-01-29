@@ -2,7 +2,7 @@ import { add } from "./operations/add.js";
 import { subtract } from "./operations/subtract.js";
 import colors from "@colors/colors"
 
-/**@type {Array<string>} */
+
 const args = process.argv.slice(2);
 const [operation, xStr, yStr] = args;
 
@@ -21,10 +21,10 @@ switch (operation) {
     printError(`${operation} is not a supported operation`);
 }
 
-function print(message){
+export function print(message: string){
     console.log(colors.green(message))
 }
 
-function printError(message){
+export function printError(message: string){
     console.log(colors.red(message))
 }

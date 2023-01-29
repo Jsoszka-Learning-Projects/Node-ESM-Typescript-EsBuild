@@ -1,0 +1,12 @@
+{
+    "include": ["src/**/*", "package.json"],
+    "exclude": ["**/*.spec.*"],
+    "compilerOptions": {
+        "outDir": "dist",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+    }
+    
+}
