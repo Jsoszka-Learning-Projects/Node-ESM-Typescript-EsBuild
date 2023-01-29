@@ -11,11 +11,11 @@ const y = Number.parseInt(yStr);
 
 switch (operation) {
   case "add":
-    print(add(x, y));
+    print(add(x, y).toString());
 
     break;
   case "subtract":
-    print(subtract(x, y));
+    print(subtract(x, y).toString());
     break;
   default:
     printError(`${operation} is not a supported operation`);
